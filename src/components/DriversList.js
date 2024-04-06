@@ -50,12 +50,29 @@ function DriversList({ drivers }) {
           <strong className="DriverName">{driver.name}</strong>
           {(selectedDriverId === driver.id || showAllDrivers) && (
             <ul className="DriverDetails">
-              <li>Age: {driver.age}</li>
-              <li>License Type: {driver.licenseType}</li>
-              <li>Phone: {driver.phone}</li>
-              <li>Address: {driver.address}</li>
-              <li>Driving History: {driver.drivingHistory}</li>
+
+              <li>Age: 
+                {driver.age ? driver.age : 'unknown'} 
+              </li>
+
+              <li>License Type: 
+                {driver.licenseType ? driver.licenseType : 'unknown'}
+              </li>
+
+              <li>Phone:
+                {driver.phone ? driver.phone : 'unknown'}
+              </li>
+
+              <li>Address: 
+                {driver.address ? driver.address : 'unknown'}
+              </li>
+
+              <li>Driving History: 
+                {driver.drivingHistory ? driver.drivingHistory : 'unknown'}
+              </li>
+
               <li>Status: {driver.status}</li>
+
               {driver.image ? (
                 <img
                   src={driver.image}

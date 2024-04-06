@@ -59,11 +59,27 @@ function VehiclesList({ vehicles }) {
                   <span className="VehicleName">{type.name}</span>
                   {(selectedVehicle === type.id || showAllVehicles) && (
                     <ul className="VehicleDetails">
-                      <li>Size: {type.size}</li>
-                      <li>Payload: {type.payload}</li>
-                      <li>Fuel Type: {type.fuel}</li>
-                      <li>Status: {type.status}</li>
-                      <li>License Plate: {type.licensePlate}</li>
+
+                      <li>Size: 
+                        {type.size ? type.size : 'unknown'}
+                      </li>
+
+                      <li>Payload: 
+                        {type.payload ? type.payload : 'unknown'}
+                      </li>
+
+                      <li>Fuel Type: 
+                        {type.fuel ? type.fuel : 'unknown'}
+                      </li>
+
+                      <li>Status: 
+                        {type.status ? type.status : 'unknown'}
+                      </li>
+
+                      <li>License Plate: 
+                        {type.licensePlate ? type.licensePlate : 'unknown'}
+                      </li>
+
                       {type.image ? (
                         <img
                           src={type.image}

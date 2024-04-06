@@ -45,7 +45,7 @@ function PlansList({ trips }) {
                   ? { backgroundColor: 'grey' }
                   : trip.status === 'In progress'
                   ? { backgroundColor: 'lightcoral' }
-                  : {}
+                  : { backgroundColor: 'white'}
               }
               key={trip.id}
             >

@@ -1,440 +1,110 @@
-import React from "react";
+import React, { useState } from "react";
 import PlansList from "./PlansList";
 
-    const trips = [
-        {
-          id: 1,
-          route: 'Route A',
-          estimatedTime: '2 hours',
-          estimatedCost: '$50',
-          departureTime: '9:00 AM',
-          expectedArrivalTime: '11:00 AM',
-          status: 'In progress',
-        },
-        {
-          id: 2,
-          route: 'Route B',
-          estimatedTime: '3.5 hours',
-          estimatedCost: '$80',
-          departureTime: '1:30 PM',
-          expectedArrivalTime: '5:00 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 3,
-          route: 'Route C',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '4:00 PM',
-          expectedArrivalTime: '5:00 PM',
-          status: 'Completed',
-        },
-        {
-          id: 4,
-          route: 'Route D',
-          estimatedTime: '2.5 hours',
-          estimatedCost: '$60',
-          departureTime: '10:00 AM',
-          expectedArrivalTime: '12:30 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 5,
-          route: 'Route E',
-          estimatedTime: '1.5 hours',
-          estimatedCost: '$40',
-          departureTime: '3:00 PM',
-          expectedArrivalTime: '4:30 PM',
-          status: 'Pending',
-        },
-        {
-          id: 6,
-          route: 'Route F',
-          estimatedTime: '2 hours',
-          estimatedCost: '$50',
-          departureTime: '11:00 AM',
-          expectedArrivalTime: '1:00 PM',
-          status: 'In progress',
-        },
-        {
-          id: 7,
-          route: 'Route G',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '2:00 PM',
-          expectedArrivalTime: '3:00 PM',
-          status: 'In progress',
-        },
-        {
-          id: 8,
-          route: 'Route H',
-          estimatedTime: '2.5 hours',
-          estimatedCost: '$60',
-          departureTime: '9:30 AM',
-          expectedArrivalTime: '12:00 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 9,
-          route: 'Route I',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '2:30 PM',
-          expectedArrivalTime: '3:30 PM',
-          status: 'In progress',
-        },
-        {
-          id: 10,
-          route: 'Route J',
-          estimatedTime: '2 hours',
-          estimatedCost: '$50',
-          departureTime: '10:30 AM',
-          expectedArrivalTime: '12:30 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 11,
-          route: 'Route K',
-          estimatedTime: '1.5 hours',
-          estimatedCost: '$40',
-          departureTime: '3:30 PM',
-          expectedArrivalTime: '5:00 PM',
-          status: 'Pending',
-        },
-        {
-          id: 12,
-          route: 'Route L',
-          estimatedTime: '3 hours',
-          estimatedCost: '$70',
-          departureTime: '9:00 AM',
-          expectedArrivalTime: '12:00 PM',
-          status: 'In progress',
-        },
-        {
-          id: 13,
-          route: 'Route M',
-          estimatedTime: '2.5 hours',
-          estimatedCost: '$60',
-          departureTime: '1:00 PM',
-          expectedArrivalTime: '3:30 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 14,
-          route: 'Route N',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '4:30 PM',
-          expectedArrivalTime: '5:30 PM',
-          status: 'In progress',
-        },
-        {
-          id: 15,
-          route: 'Route O',
-          estimatedTime: '2 hours',
-          estimatedCost: '$50',
-          departureTime: '11:30 AM',
-          expectedArrivalTime: '1:30 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 16,
-          route: 'Route P',
-          estimatedTime: '1.5 hours',
-          estimatedCost: '$40',
-          departureTime: '2:30 PM',
-          expectedArrivalTime: '4:00 PM',
-          status: 'Pending',
-        },
-        {
-          id: 17,
-          route: 'Route Q',
-          estimatedTime: '3 hours',
-          estimatedCost: '$70',
-          departureTime: '9:30 AM',
-          expectedArrivalTime: '12:30 PM',
-          status: 'In progress',
-        },
-        {
-          id: 18,
-          route: 'Route R',
-          estimatedTime: '2.5 hours',
-          estimatedCost: '$60',
-          departureTime: '1:30 PM',
-          expectedArrivalTime: '4:00 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 19,
-          route: 'Route S',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '3:00 PM',
-          expectedArrivalTime: '4:00 PM',
-          status: 'Completed',
-        },
-        {
-          id: 20,
-          route: 'Route T',
-          estimatedTime: '2.5 hours',
-          estimatedCost: '$60',
-          departureTime: '10:00 AM',
-          expectedArrivalTime: '12:30 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 21,
-          route: 'Route U',
-          estimatedTime: '1.5 hours',
-          estimatedCost: '$40',
-          departureTime: '3:00 PM',
-          expectedArrivalTime: '4:30 PM',
-          status: 'Pending',
-        },
-        {
-          id: 22,
-          route: 'Route V',
-          estimatedTime: '2 hours',
-          estimatedCost: '$50',
-          departureTime: '11:00 AM',
-          expectedArrivalTime: '1:00 PM',
-          status: 'In progress',
-        },
-        {
-          id: 23,
-          route: 'Route W',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '2:00 PM',
-          expectedArrivalTime: '3:00 PM',
-          status: 'In progress',
-        },
-        {
-          id: 24,
-          route: 'Route X',
-          estimatedTime: '2.5 hours',
-          estimatedCost: '$60',
-          departureTime: '9:30 AM',
-          expectedArrivalTime: '12:00 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 25,
-          route: 'Route Y',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '2:30 PM',
-          expectedArrivalTime: '3:30 PM',
-          status: 'In progress',
-        },
-        {
-          id: 26,
-          route: 'Route Z',
-          estimatedTime: '2 hours',
-          estimatedCost: '$50',
-          departureTime: '10:30 AM',
-          expectedArrivalTime: '12:30 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 27,
-          route: 'Route AA',
-          estimatedTime: '1.5 hours',
-          estimatedCost: '$40',
-          departureTime: '3:30 PM',
-          expectedArrivalTime: '5:00 PM',
-          status: 'Pending',
-        },
-        {
-          id: 28,
-          route: 'Route AB',
-          estimatedTime: '2.5 hours',
-          estimatedCost: '$60',
-          departureTime: '9:00 AM',
-          expectedArrivalTime: '11:30 AM',
-          status: 'Scheduled',
-        },
-        {
-          id: 29,
-          route: 'Route AC',
-          estimatedTime: '1.5 hours',
-          estimatedCost: '$40',
-          departureTime: '1:00 PM',
-          expectedArrivalTime: '2:30 PM',
-          status: 'Pending',
-        },
-        {
-          id: 30,
-          route: 'Route AD',
-          estimatedTime: '2 hours',
-          estimatedCost: '$50',
-          departureTime: '3:00 PM',
-          expectedArrivalTime: '5:00 PM',
-          status: 'In progress',
-        },
-        {
-          id: 31,
-          route: 'Route AE',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '10:00 AM',
-          expectedArrivalTime: '11:00 AM',
-          status: 'Scheduled',
-        },
-        {
-          id: 32,
-          route: 'Route AF',
-          estimatedTime: '2.5 hours',
-          estimatedCost: '$60',
-          departureTime: '12:30 PM',
-          expectedArrivalTime: '3:00 PM',
-          status: 'In progress',
-        },
-        {
-          id: 33,
-          route: 'Route AG',
-          estimatedTime: '1.5 hours',
-          estimatedCost: '$40',
-          departureTime: '4:00 PM',
-          expectedArrivalTime: '5:30 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 34,
-          route: 'Route AH',
-          estimatedTime: '2 hours',
-          estimatedCost: '$50',
-          departureTime: '9:30 AM',
-          expectedArrivalTime: '11:30 AM',
-          status: 'Pending',
-        },
-        {
-          id: 35,
-          route: 'Route AI',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '1:30 PM',
-          expectedArrivalTime: '2:30 PM',
-          status: 'In progress',
-        },
-        {
-          id: 36,
-          route: 'Route AJ',
-          estimatedTime: '2.5 hours',
-          estimatedCost: '$60',
-          departureTime: '3:30 PM',
-          expectedArrivalTime: '6:00 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 37,
-          route: 'Route AK',
-          estimatedTime: '1.5 hours',
-          estimatedCost: '$40',
-          departureTime: '10:30 AM',
-          expectedArrivalTime: '12:00 PM',
-          status: 'In progress',
-        },
-        {
-          id: 38,
-          route: 'Route AL',
-          estimatedTime: '2 hours',
-          estimatedCost: '$50',
-          departureTime: '1:00 PM',
-          expectedArrivalTime: '3:00 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 39,
-          route: 'Route AM',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '4:30 PM',
-          expectedArrivalTime: '5:30 PM',
-          status: 'Pending',
-        },
-        {
-          id: 40,
-          route: 'Route AN',
-          estimatedTime: '2.5 hours',
-          estimatedCost: '$60',
-          departureTime: '9:00 AM',
-          expectedArrivalTime: '11:30 AM',
-          status: 'In progress',
-        },
-        {
-          id: 41,
-          route: 'Route AO',
-          estimatedTime: '1.5 hours',
-          estimatedCost: '$40',
-          departureTime: '12:00 PM',
-          expectedArrivalTime: '1:30 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 42,
-          route: 'Route AP',
-          estimatedTime: '2 hours',
-          estimatedCost: '$50',
-          departureTime: '2:30 PM',
-          expectedArrivalTime: '4:30 PM',
-          status: 'Pending',
-        },
-        {
-          id: 43,
-          route: 'Route AQ',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '10:00 AM',
-          expectedArrivalTime: '11:00 AM',
-          status: 'In progress',
-        },
-        {
-          id: 44,
-          route: 'Route AR',
-          estimatedTime: '2.5 hours',
-          estimatedCost: '$60',
-          departureTime: '1:30 PM',
-          expectedArrivalTime: '4:00 PM',
-          status: 'Scheduled',
-        },
-        {
-          id: 45,
-          route: 'Route AS',
-          estimatedTime: '1.5 hours',
-          estimatedCost: '$40',
-          departureTime: '4:30 PM',
-          expectedArrivalTime: '6:00 PM',
-          status: 'In progress',
-        },
-        {
-          id: 46,
-          route: 'Route AT',
-          estimatedTime: '2 hours',
-          estimatedCost: '$50',
-          departureTime: '9:30 AM',
-          expectedArrivalTime: '11:30 AM',
-          status: 'Scheduled',
-        },
-        {
-          id: 47,
-          route: 'Route AU',
-          estimatedTime: '1 hour',
-          estimatedCost: '$30',
-          departureTime: '1:00 PM',
-          expectedArrivalTime: '2:00 PM',
-          status: 'Pending',
-        }
+const PlansManagement = () => {
+  const [trips, setTrips] = useState([
+    {
+      id: 1,
+      route: 'Route A',
+      estimatedTime: '2 hours',
+      estimatedCost: '$50',
+      departureTime: '9:00 AM',
+      expectedArrivalTime: '11:00 AM',
+      status: 'In progress',
+    },
+    // Các trip khác...
+  ]);
 
-      ];
+  const [newTrip, setNewTrip] = useState({
+    id: null,
+    route: '',
+    estimatedTime: '',
+    estimatedCost: '',
+    departureTime: '',
+    expectedArrivalTime: '',
+    status: '',
+  });
 
-      function PlansManagement() {
-        return (
-          <div>
-            <h2 className="TripManagement">Trip Planning and Tracking</h2>
-            <PlansList trips={trips} />
-          </div>
-        );
-      }
-      
-      export default PlansManagement;
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setNewTrip((prevTrip) => ({
+      ...prevTrip,
+      [name]: value,
+    }));
+  };
+
+  const handleAddTrip = () => {
+    setTrips((prevTrips) => [...prevTrips, newTrip]);
+    setNewTrip({
+      id: null,
+      route: '',
+      estimatedTime: '',
+      estimatedCost: '',
+      departureTime: '',
+      expectedArrivalTime: '',
+      status: '',
+    });
+  };
+
+  return (
+    <div>
+      <PlansList trips={trips} />
+      <div>
+        <h2>Add Trip</h2>
+        <div className="input-group">
+          <input
+            className="input-field"
+            type="text"
+            name="route"
+            value={newTrip.route}
+            placeholder="Route"
+            onChange={handleInputChange}
+          />
+          <input
+            className="input-field"
+            type="text"
+            name="estimatedTime"
+            value={newTrip.estimatedTime}
+            placeholder="Estimated Time"
+            onChange={handleInputChange}
+          />
+          <input
+            className="input-field"
+            type="text"
+            name="estimatedCost"
+            value={newTrip.estimatedCost}
+            placeholder="Estimated Cost"
+            onChange={handleInputChange}
+          />
+          <input
+            className="input-field"
+            type="text"
+            name="departureTime"
+            value={newTrip.departureTime}
+            placeholder="Departure Time"
+            onChange={handleInputChange}
+          />
+          <input
+            className="input-field"
+            type="text"
+            name="expectedArrivalTime"
+            value={newTrip.expectedArrivalTime}
+            placeholder="Expected Arrival Time"
+            onChange={handleInputChange}
+          />
+          <input
+            className="input-field"
+            type="text"
+            name="status"
+            value={newTrip.status}
+            placeholder="Status"
+            onChange={handleInputChange}
+          />
+        </div>
+        <button className="add-trip-button" onClick={handleAddTrip}>Add Trip</button>
+      </div>
+    </div>
+  );
+};
+
+export default PlansManagement;

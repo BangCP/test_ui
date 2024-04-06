@@ -8,7 +8,6 @@ function DriversManagement() {
           name: 'John Doe',
           age: 35,
           licenseType: 'Class A',
-          phone: '123-456-7890',
           address: '123 Main St',
           drivingHistory: 'Clean',
           status: 'Ready',
@@ -21,7 +20,6 @@ function DriversManagement() {
           age: 28,
           licenseType: 'Class B',
           phone: '987-654-3210',
-          address: '456 Elm St',
           drivingHistory: 'Minor violations',
           status: 'Not ready',
           image: 'https://www.shutterstock.com/image-photo/guy-on-background-sky-260nw-497596165.jpg'
@@ -62,7 +60,6 @@ function DriversManagement() {
           id: 6,
           name: 'Sarah Brown',
           age: 33,
-          licenseType: 'Class C',
           phone: '222-333-4444',
           address: '890 Cedar St',
           drivingHistory: 'Clean',
