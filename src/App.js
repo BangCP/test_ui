@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
+import VehiclesManagement from './components/VehiclesManagement';
+import DriversManagement from './components/DriversManagement';
+import PlansManagement from './components/PlansManagement';
+import Actions from './components/Actions';
 import './App.css';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className='Pm'>Project management</h1>
+
+      <div className="container">
+        <div className="left-panel">
+          <VehiclesManagement />
+        </div>
+        <div className="middle-panel">
+          <DriversManagement />
+        </div>
+        <div className="right-panel">
+          <PlansManagement/>
+        </div>
+        <div className="most-right-panel">
+          <Actions/>
+        </div>
+
+
+      </div>
+
+      {/* JavaScript code for interacting with the forms and performing necessary actions */}
+      <script>
+        {/* JavaScript code goes here */}
+      </script>
     </div>
   );
 }

@@ -1,3 +1,6 @@
+
+
+
 .App {
   text-align: center;
 }
@@ -36,3 +39,177 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+.container {
+  display: flex;
+  width: 100%;
+}
+.App{
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  
+}
+
+
+
+.left-panel,
+.middle-panel {
+  border: 3px solid lightgrey;
+  border-radius: 3px;
+  margin: 2px;
+  width: 15%;
+}
+.right-panel {
+  border: 3px solid lightgrey;
+  border-radius: 3px;
+  margin: 2px;
+  width: 46%;
+  
+}
+.most-right-panel{
+  border: 3px solid lightgrey;
+  border-radius: 6px;
+  margin: 2px;
+  width: 24%;
+}
+
+.left-panel {
+  background-image: linear-gradient(to right, #5a3f37, #2c7744);
+}
+
+.middle-panel {
+  background-image: linear-gradient(to right, #141e30, #243b55);
+}
+
+.right-panel {
+  background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+}
+.most-right-panel{
+  background-image: linear-gradient(to right, #5a3f37, #2c7744);
+}
+
+
+.VehicleManagement{
+  font-size: large;
+  background-color: #d6dae4;
+  padding: 0px;
+  margin: 0px;
+}
+.DriverManagement{
+  font-size: large;
+  background-color: #d6dae4;
+  padding: 0px;
+  margin: 0px;
+}
+
+.PlanManagement{
+  background-color: #d6dae4;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+
+.VehicleUnit{
+  width: 98%;
+  text-align: left;
+  background-color:#d9d9d9;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+.VehicleName{
+  font-size: 15px;
+  font-weight: bold;
+}
+  .VehicleDetails{
+  font-size: 15px;
+  font-style: italic;
+}
+.vl{
+  color: white;
+  font-size: 15px;
+  font-style: italic;
+  text-align: left;
+}
+
+
+.DriverUnit{
+  width: 98%;
+  text-align: left;
+  background-color:#d9d9d9;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+.DriverName{
+  font-size: 15px;
+  font-weight: bold;
+}
+.DriverDetails{
+  font-size: 15px;
+  font-style: italic;
+}
+
+.dl{
+  color: white;
+  font-size: 15px;
+  font-style: italic;
+  text-align: left;
+}
+
+.TripManagement{
+  background-color: #c9c0c0;
+  padding: 0px;
+  margin: 0px;
+}
+.Pm{
+  padding: 10px;
+  margin: 0px;
+  color: white;
+
+}
+
+.TripUnit{
+  text-align: center;
+  font-size: large;
+  background-color:#d9d9d9;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.TripTable{
+  border-radius: 2px;
+  border: #000;
+  border-radius: 2px solid;
+}
+
+.TripValueName{
+  color: white;
+  font-weight: bold;
+}
+
+
+.Actions{
+  background-color: #d6dae4;
+  padding: 0px;
+  margin: 0px;
+}
+
+.buttons{
+  background-color: #d9d9d9;
+  border: 5px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+
+
