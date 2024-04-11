@@ -14,8 +14,21 @@ function Actions() {
         <Button variant="contained" style={{ backgroundColor: 'brown', color: 'white' }}>Start trip</Button>
         <Button variant="contained" style={{ backgroundColor: 'black', color: 'white' }}>End trip</Button>
       </div>
-      <div className='graph'></div>
-    </div>
+
+      <div class="wrapper">
+        <div class="pillars">
+          <div class="pillar pillar1"></div>
+          <div class="pillar pillar2"></div>
+          <div class="pillar pillar3"></div>
+          <div class="pillar pillar4"></div>
+          <div class="pillar pillar5"></div>
+          <div class="mask"></div>
+        </div>
+        
+      </div>
+
+      </div>
+    
   );
 }
 

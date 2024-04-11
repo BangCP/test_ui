@@ -71,8 +71,8 @@ const PlansManagement = () => {
   return (
     <div>
       <PlansList trips={trips} />
-      <div>
-        <h2>Add Trip</h2>
+      <div className="AddTripBlock">
+        <h2 className="AddTripText">Add Trip</h2>
         <div className="input-group">
           <input
             className="input-field"
