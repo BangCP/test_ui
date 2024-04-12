@@ -50,13 +50,14 @@ function PlansList({ trips }) {
               }
               key={trip.id}
             >
-              <td className="tripRoute">{trip.route}</td>
-              <td className="tripEstimatedTime">{trip.estimatedTime}</td>
-              <td className="tripEstimatedCost">{trip.estimatedCost}</td>
-              <td className="tripDepartureTime">{trip.departureTime}</td>
-              <td className="tripDriver">{trip.driver}</td>
-              <td className="tripVehicle">{trip.vehicle}</td>
-              <td className="tripStatus">{trip.status}</td>
+              <td className="tripRoute">{trip.route || "__?__"}</td>
+              <td className="tripRoute">{trip.route || "__?__"}</td>
+              <td className="tripEstimatedTime">{trip.estimatedTime || "___?___"}</td>
+              <td className="tripEstimatedCost">{trip.estimatedCost || "___?___"}</td>
+              <td className="tripDepartureTime">{trip.departureTime || "__?__"}</td>
+              <td className="tripDriver">{trip.driver || "__?__"}</td>
+              <td className="tripVehicle">{trip.vehicle || "__?__"}</td>
+              <td className="tripStatus">{trip.status || "__?__"}</td>
             </tr>
           ))}
         </tbody>
