@@ -28,9 +28,9 @@ function PlansList({ trips }) {
             <th>Estimated Time</th>
             <th>Estimated Cost</th>
             <th>Departure Time</th>
-            <th>Status</th>
             <th>Driver</th>
             <th>Vehicle</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
@@ -54,9 +54,9 @@ function PlansList({ trips }) {
               <td className="tripEstimatedTime">{trip.estimatedTime}</td>
               <td className="tripEstimatedCost">{trip.estimatedCost}</td>
               <td className="tripDepartureTime">{trip.departureTime}</td>
-              <td className="tripStatus">{trip.status}</td>
               <td className="tripDriver">{trip.driver}</td>
               <td className="tripVehicle">{trip.vehicle}</td>
+              <td className="tripStatus">{trip.status}</td>
             </tr>
           ))}
         </tbody>

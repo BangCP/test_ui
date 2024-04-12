@@ -5,7 +5,7 @@ const PlansManagement = () => {
   const [trips, setTrips] = useState([
     {
       id: 1,
-      route: 'Route A',
+      route: 'Route Aa',
       estimatedTime: '2 hours',
       estimatedCost: '$50',
       departureTime: '09:00',
