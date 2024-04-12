@@ -111,6 +111,7 @@ function DriversManagement() {
     <div>
       <h2 className='DriverManagement'>Driver Management</h2>
       <DriversList drivers={drivers} />
+      <div className="divider"></div>
     </div>
   );
 }

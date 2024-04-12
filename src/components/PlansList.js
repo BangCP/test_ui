@@ -22,7 +22,7 @@ function PlansList({ trips }) {
   return (
     <div className="TripTable">
       <table>
-        <thead>
+        <thead className='tvn'>
           <tr className="TripValueName">
             <th>Route</th>
             <th>Estimated Time</th>

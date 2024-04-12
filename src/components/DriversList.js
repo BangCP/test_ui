@@ -42,7 +42,7 @@ function DriversList({ drivers }) {
             driver.status === 'Ready'
               ? { backgroundColor: 'lightgreen' }
               : driver.status === 'Not ready'
-              ? { backgroundColor: 'lightcoral' }
+              ? { backgroundColor: '#D05D66' }
               : {}
           }
           onClick={() => toggleShowInfo(driver.id)}

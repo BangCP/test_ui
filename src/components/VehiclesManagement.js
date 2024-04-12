@@ -129,6 +129,7 @@ function VehiclesManagement() {
       <div>
         <h2 className='VehicleManagement'>Vehicle Management</h2>
         <VehiclesList vehicles={vehicles} />
+        <div className="divider"></div>
       </div>
     );
   }

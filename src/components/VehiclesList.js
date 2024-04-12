@@ -51,7 +51,7 @@ function VehiclesList({ vehicles }) {
                       : type.status === 'Maintenance'
                       ? { backgroundColor: 'grey' }
                       : type.status === 'Inactive'
-                      ? { backgroundColor: 'lightcoral' }
+                      ? { backgroundColor: '#D05D66' }
                       : {}
                   }
                   onClick={() => toggleShowInfo(type.id)}

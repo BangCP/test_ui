@@ -5,15 +5,15 @@ import { PieChart } from 'react-minimal-pie-chart';
 function Actions() {
   // Dữ liệu cho biểu đồ Pie Chart
   const data = [
-    { title: 'InProgess', value: 10, color: '#E38627' },
-    { title: 'Pending', value: 15, color: 'grey' },
-    { title: 'Scheduled', value: 20, color: 'blue' },
-    { title: 'Completed', value: 25, color: 'green' },
+    { title: 'InProgess', value: 10, color: '#CACF2B' },
+    { title: 'Pending', value: 15, color: '#A9A899' },
+    { title: 'Scheduled', value: 20, color: '#171F6D' },
+    { title: 'Completed', value: 25, color: '#6CA96B' },
   ];
 
   return (
     <div className='actionContainer'>
-      <h2 className='Actions'>Stuffs</h2>
+      <h2 className='Actions'>Actions</h2>
       <div className='buttons'>
         <Button variant="contained" style={{ backgroundColor: 'green', color: 'white' }}>Create new plan</Button>
         <Button variant="contained" style={{ backgroundColor: 'blue', color: 'white' }}>Edit plan</Button>

@@ -70,7 +70,7 @@ const PlansManagement = () => {
 
   return (
     <div>
-      <PlansList trips={trips} />
+      
       <div className="AddTripBlock">
         <h2 className="AddTripText">Add Trip</h2>
         <div className="input-group">
@@ -137,6 +137,9 @@ const PlansManagement = () => {
         </div>
         <button className="add-trip-button" onClick={handleAddTrip}>Add Trip</button>
       </div>
+      <div className="divider"></div>
+      <PlansList trips={trips} />
+      <div className="divider"></div>
     </div>
   );
 };
